@@ -14,6 +14,11 @@ class MainActivity : AppCompatActivity() {
             check(first_number_input.text.toString(), second_number_input.text.toString(), '+')
         }
 
+        // add subtract feature
+        btn_minus.setOnClickListener() {
+            check(first_number_input.text.toString(), second_number_input.text.toString(), '-')
+        }
+
     }
 
     // define function check
@@ -32,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         var result = 0.0
         when (operator) {
             '+' -> result = firstNum + secondNum
+            '-' -> result = firstNum - secondNum
         }
         tv_result.text = result.toString()
     }
